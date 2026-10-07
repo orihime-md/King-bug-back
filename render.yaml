@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: king-bug-md
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
+    plan: free
