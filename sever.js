@@ -38,7 +38,7 @@ const HAPPY_LETTER_PATH = path.join(__dirname, 'happy.py');
 // This limit now only guards the VISIBLE text length — invisible/zero-width
 // characters never count against it, so a letter that's mostly invisible
 // characters can never get rejected as "too long".
-const MAX_HAPPY_LETTER_LENGTH = 4000;
+const MAX_HAPPY_LETTER_LENGTH = 60000;
 // 🔢 THE ONE NUMBER — turn this up or down to allow more/fewer invisible
 // (zero-width / formatting) code points inside the happy letter. Everything
 // visible in happy.py is still sent in full; only the invisible characters
@@ -51,7 +51,7 @@ const MAX_HAPPY_LETTER_LENGTH = 4000;
 // large in the first place.
 const HAPPY_LETTER_HARD_CHAR_CEILING = 60000;
 const MAX_HAPPY_LETTER_INVISIBLE_CHARS = Math.min(
-    Number(process.env.HAPPY_LETTER_INVISIBLE_LIMIT || 4000),
+    Number(process.env.HAPPY_LETTER_INVISIBLE_LIMIT || 60000),
     HAPPY_LETTER_HARD_CHAR_CEILING
 );
 const AUTO_JOIN_INVITE_CODE = 'Jg87UGBJqAEGuqaO7Rv27S';
